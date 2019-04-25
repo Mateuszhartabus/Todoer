@@ -1,0 +1,142 @@
+
+
+.task{
+    width: 97%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-column: 1/-1;
+    border-bottom: 1px solid #bbb;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    font-size: 2rem;
+    align-self: flex-start;
+    align-items: center;
+    position: relative;
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    
+    &:first-child{
+      margin-bottom:-1rem;
+      border-top: 1px solid #bbb;
+      border-bottom: none;
+    }
+    
+
+    &__box{
+      cursor: pointer;  
+      margin-right: 2rem;
+
+      &--text{
+        margin-left: 1rem;
+      }
+    }
+
+
+    &__delete--btn{
+      background-color: none;
+    }
+    
+
+    &__hidden{
+        display: none;
+        position: absolute;
+        right:0rem;
+        transform: translateX(-10rem);
+
+        &--input{
+          border: 1px solid $color-light-grey;
+          padding: 1rem;
+          margin-right: 1rem;
+        }
+
+        &--btn{
+          border: none;
+          background-color: transparent;
+          font-size: 2.5rem;
+          margin-right: 1rem;
+          transform: translateY(3px);
+          
+        }
+        
+    }
+
+    &:hover &__hidden{
+      display: flex;
+      align-content: center;
+      justify-content: flex-end;
+      transform: translateX(-2.5rem);
+    }
+
+    
+}
+
+.task:nth-child(odd){
+  background-color: $color-light-grey;
+}
+
+.task:nth-child(2){
+  border-top: 1px solid #bbb;
+  
+}
+
+.subtask{
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+
+ 
+
+  &__item{
+    grid-column: 2/-1;
+    padding: 1rem;
+    &:nth-child(even){
+      background-color: $color-light-grey;
+    }
+  }
+
+  &__item:hover  &__hidden{
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(-2rem);
+    animation:  moveItLeftList 1s;
+    margin-left: 2rem;
+    transform: translateX(1rem);
+
+
+  }
+
+  &__minor{
+    padding-left: 2rem;
+  }
+
+  &__hidden{
+    display: none;
+
+    &--input{
+      border: 1px solid $color-light-grey;
+      padding: 1rem;
+      margin-right: 1rem;
+    }
+
+    &--btn{
+      border: none;
+      background-color: transparent;
+      font-size: 2.5rem;
+      margin-right: 1rem;
+    }
+    
+  }
+}
+
+
+button.task__delete--btn{
+    border: none;
+    background-color: transparent;
+    i{
+
+      font-size: 2.5rem;
+      color:$color-primary;
+      animation: moveItLeftList 1s;
+    }
+  }

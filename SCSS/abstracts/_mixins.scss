@@ -1,0 +1,7 @@
+@mixin icons {
+    width: 4rem;
+           height: 4rem;
+           margin: 1rem;
+           background-image: linear-gradient(to right bottom, $color-yellow-2, $color-primary);
+           fill:transparent;
+}

@@ -1,0 +1,13 @@
+$color-dark : #2b2b3a;
+$color-dark-2 : #333;
+$color-secondary : #1ed2f4;
+$color-secondary-dark: darken($color-secondary, 10%);
+$color-light : #f4f5f6;
+$color-light-grey: darken($color-light, 5%);
+$color-light-2 : #bbbbbb;
+$color-primary : #254558;
+$color-primary-light: lighten($color-primary, 10%);
+$color-yellow : #eafc40;
+$color-yellow-2 : darken($color-yellow, 30%);
+
+$default-font : 'Source Sans Pro', sans-serif;

@@ -1,0 +1,119 @@
+.profile{
+    width: 100%;
+    background-color: $color-light-grey;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__icon{
+        height: 7rem;
+        width: 7rem;
+        background-image: linear-gradient(to left, $color-secondary, $color-primary);
+        -webkit-mask: url(../img/svg/chart.svg#Capa_1);
+        mask:url(../img/svg/chart.svg#Capa_1);
+        fill: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__box{
+        display: flex;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+        &--wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            margin-right: 1.5rem;
+        }
+
+        &--lastName{
+            text-align: center;
+        }
+
+        &--btn{
+            color: $color-light-grey;
+            background-color: $color-primary-light;
+            padding: .5rem;
+            text-transform: uppercase;
+            border: 1px solid $color-primary-light;
+            border-radius: 2rem;
+            transition: .3s;
+            margin-top: .5rem;
+
+            &:hover{
+                color: $color-primary-light;
+                background-color: $color-light-grey;
+            }
+        }
+        &--pic{
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        }
+    }
+}
+.add {
+    padding: 1.4rem;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+    
+    &__container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+    &__list,
+    &__task {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.4rem;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+    }
+
+    &__list{ width: 40rem}
+    &__task { width: 400px;}
+    
+
+    &__btn {
+        font-size: 35px;
+        background: none;
+        border: none;
+        color: #28B9B5;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.1;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        &:active { transform: translateY(2px); }
+    
+    }
+
+    &__type:focus,
+    &__list:focus,
+    &__task:focus {
+    outline: none;
+    border: 1px solid #28B9B5;
+    }
+
+    &__btn:focus { outline: none; }
+}
+
+
+
+
+
+
+
+

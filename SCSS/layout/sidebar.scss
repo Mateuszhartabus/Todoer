@@ -1,0 +1,70 @@
+.sidebar{
+    background-color: $color-dark-2;
+    padding-top: 1rem;
+    position: relative;
+
+    &__btn{
+        display: flex;
+        width: 100%;
+        padding: 2rem 3rem;
+        cursor: pointer;
+        align-items: center;
+        text-transform: uppercase;
+        position: relative;
+
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+    
+        &--active{
+        background-color: $color-primary-light;
+        }
+      }
+
+    &__btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-primary-light;
+        height: 100%;
+        width: 3px; 
+        transform: scaleY(0);
+        transition: transform .2s,
+        width .4s cubic-bezier(1,0,0,1) .2s;
+    }
+
+    &__btn:hover::before{
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__icon{
+        height: 3rem;
+        width: 3rem;
+        fill: $color-light;
+        margin-right: 2rem;
+        z-index: 10;
+        
+    }
+
+ 
+    &__link{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: white;
+        z-index: 10;
+    }
+
+    &__copy{
+        position: absolute;
+        bottom: 0;
+        margin-left: 4rem;
+        color: white;
+        // Do naprawy
+        font-size: 1.6rem;
+    
+    }
+
+}

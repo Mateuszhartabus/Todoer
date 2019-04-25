@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html{
+    //Deklaracja 1 rem'a na 10px
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: $default-font;
+}
+
+.page__logged{
+    display: none;
+}
+
+.page__profile{
+    display: none;
+}
+.page__history{
+    display: none;
+}
+::selection{
+ 
+}
+.background{
+    background-image:  radial-gradient( $color-secondary, $color-dark);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+    width: 100%;
+    
+}

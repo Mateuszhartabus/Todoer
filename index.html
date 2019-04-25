@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Todoer</title>
+</head>
+<body>
+    <div class="background">
+        <div class="page__tolog"> 
+        <div class="log-in">
+                <h1 class='h1'>Join to the Todoer with over milion of users.</h1>  
+        <div class="log-in__form">
+            
+        <div class="log-in__box">
+         <div class="log-in__box--title">Log in to the Todoer</div> 
+         <div class="log-in__box--single">
+            <input type="email" name="login" id="emailField" class="log-in__box--input" placeholder="E-Mail">
+            <svg class="log-in__box--icon">
+                <use xlink:href="img/svg/envelope.svg#Capa_1"></use>
+            </svg>
+        </svg>
+         </div>
+         <div class="log-in__box--single">
+            <input type="password" name="login" id="passwordField" class="log-in__box--input" placeholder="password">
+            <svg class="log-in__box--icon2">
+                <use xlink:href="img/svg/lock.svg#Capa_1"></use>
+            </svg>
+        </div>
+        </div>
+        <div class="log-in__box--don u-mb-small u-center-text">
+                Don't have an account? <button class="log-in__box--link" onclick="openRegister()" >Sign in.</button>
+            </div>
+            <button class="log-in__form--btn" onclick="login()">SUBMIT</button>
+        <!-- <input type="submit" class="log-in__form--btn" value="Submit" onclick="login()"> -->
+        </div>
+    </div> 
+  <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+    </div>
+
+    <div class="register">
+            <div onclick="openLogin()" class="register__exit">
+                    <span class="register__exit--icon">&nbsp;</span>
+                  </div>
+        <div class="register__container">
+            
+            <div class="register__contiainer__register">
+                <h2 class="register__heading2">Register to use Todoer</h2>
+                    <div class="log-in__box--single">
+                            <input type="email" name="login" id="emailFieldRegister" class="log-in__box--input" placeholder="E-Mail">
+                            <svg class="log-in__box--icon">
+                                <use xlink:href="img/svg/envelope.svg#Capa_1"></use>
+                            </svg>
+                        </svg>
+                         </div>
+                         <div class="log-in__box--single">
+                                <input type="password" name="login" id="passwordFieldRegister1" class="log-in__box--input" placeholder="password">
+                                <svg class="log-in__box--icon2">
+                                    <use xlink:href="img/svg/lock.svg#Capa_1"></use>
+                                </svg>
+                            </div>
+                            <div class="log-in__box--single">
+                                    <input type="password" name="login" id="passwordFieldRegister2" class="log-in__box--input" placeholder="password">
+                                    <svg class="log-in__box--icon2">
+                                        <use xlink:href="img/svg/lock.svg#Capa_1"></use>
+                                    </svg>
+                        </div>
+                    <button class="register__container--btn" onclick="registerUser()"> Register</button>
+            </div>
+        </div>
+
+        
+    </div>
+    </div>
+
+
+    <div class="page__logged">
+    <header class="header"><h1 class="heading-1">Welcome to the Todoer, today is <span class="changeMonth">%month%</span></h1></header>
+    <div class="flexbox__sub">
+    <nav class="sidebar">
+        <div class="sidebar__btn sidebar__btn--active">
+            <svg class="sidebar__icon">
+                <use xlink:href="img/svg/checked.svg#Layer_1"></use>
+            </svg>
+            <span class="sidebar__link" onclick="toMain()"> To do list </span>
+        </div>
+        <div class="sidebar__btn">
+                <svg class="sidebar__icon">
+                        <use xlink:href="img/svg/open-book.svg#Layer_1"></use>
+                    </svg>
+                    <span class="sidebar__link" onclick="toHistory()" > History </span>
+        </div>
+        <div class="sidebar__btn" onclick="toProfile()">
+                <svg class="sidebar__icon">
+                        <use xlink:href="img/svg/user.svg#Capa_1"></use>
+                    </svg>
+                    <span class="sidebar__link" > Profile </span>
+        </div>
+        <div class="sidebar__btn">
+                <svg class="sidebar__icon">
+                        <use xlink:href="img/svg/copy.svg#Capa_1"></use>
+                    </svg>
+                    <span class="sidebar__link"> Copyrights </span>
+        </div>
+        <div class="sidebar__copy">&copy; <span class="changeYear">%date%</span> Mateusz Hartabus</div>
+    </nav>
+    <!-- Main -->
+    <main class="main" >
+        <div class="profile">
+            <div class="add__container">
+                <input type="text" class="add__list" placeholder="Add list">
+                <!-- <input type="text" class="add__task" placeholder="Add task"> -->
+                <button class="add__btn" onclick="passData()"><i class="ion-ios-checkmark-outline"></i></button>
+            </div>
+            <div class="profile__box">
+                <div class="profile__box--wrapper">
+                <div class="profile__box--name">Logged as:</div>
+                <div class="profile__box--lastName">Mark</div>
+                <button id="logoutButton"  onclick="logout()" class="profile__box--btn">Logout</button>
+            </div>
+                <img alt="profile picture" src="img/person-1.jpg" class="profile__box--pic">
+            </div>
+        </div>
+
+        
+
+         <div class="tasks">
+    </main>
+  </div>
+ </div>      
+
+ <div class="page__profile">
+    <div class="flexbox">
+        <div class="background">
+           <header class="header"><h1 class="heading-1">Welcome to the Todoer, today is <span class="changeMonth">%month%</span></h1></header>
+           <div class="flexbox__sub">
+           <nav class="sidebar">
+               <div class="sidebar__btn"  onclick="toMain()">
+                   <svg class="sidebar__icon">
+                       <use xlink:href="img/svg/checked.svg#Layer_1"></use>
+                   </svg>
+                   <span class="sidebar__link"> To do list </span>
+               </div>
+               <div class="sidebar__btn" onclick="toHistory()">
+                       <svg class="sidebar__icon">
+                               <use xlink:href="img/svg/open-book.svg#Layer_1"></use>
+                           </svg>
+                           <span class="sidebar__link" > History </span>
+               </div>
+               <div class="sidebar__btn sidebar__btn--active" onclick="toProfile()">
+                       <svg class="sidebar__icon">
+                               <use xlink:href="img/svg/user.svg#Capa_1"></use>
+                           </svg>
+                           <span class="sidebar__link" > Profile </span>
+               </div>
+               <div class="sidebar__btn">
+                       <svg class="sidebar__icon">
+                               <use xlink:href="img/svg/copy.svg#Capa_1"></use>
+                           </svg>
+                           <span class="sidebar__link"> Copyrights </span>
+               </div>
+               <div class="sidebar__copy">&copy; <span class="changeYear">%date%</span> Mateusz Hartabus</div>
+           </nav>
+           <!-- Main -->
+           <main class="main" >
+               <div class="main__profile">
+               <div class="pProfile">
+                   
+                   <img src="img/person-1.jpg" class="pProfile__img">
+                   
+                   <div class="pProfile__box">
+                       <h2 class="heading-profile">Logged as Mark:</h2>
+                       <div class="pProfile__box--smallbox">
+                           <span class="pProfile__box--text">Name : </span>
+                           <span class="pProfile__box--userText">Mark</span>
+                       </div>
+                       <div class="pProfile__box--smallbox">
+                           <span class="pProfile__box--text">Lastname : </span>
+                           <span class="pProfile__box--userText">Smith </span>
+                       </div>
+                       <div class="pProfile__box--smallbox">
+                               <span class="pProfile__box--text">Email : </span>
+                               <span id="userEmail" class="pProfile__box--userText"></span>
+                                </div>
+                                <div class="pProfile__box--smallbox">
+                                    <span class="pProfile__box--text">Email Verified : </span>
+                                    <span id="userEmailVery" class="pProfile__box--userText"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>      
+    </div>
+ </div>
+
+ <div class="page__history">
+    <div class="flexbox">
+        <div class="background">
+            <header class="header"><h1 class="heading-1">Welcome to the Todoer, today is %date%</h1></header>
+                <div class="flexbox__sub">
+                    <nav class="sidebar">
+                        <div class="sidebar__btn"  onclick="toMain()">
+                            <svg class="sidebar__icon">
+                                <use xlink:href="img/svg/checked.svg#Layer_1"></use>
+                            </svg>
+                            <span class="sidebar__link"> To do list </span>
+                        </div>
+                        <div class="sidebar__btn sidebar__btn--active" onclick="toHistory()">
+                            <svg class="sidebar__icon">
+                                <use xlink:href="img/svg/open-book.svg#Layer_1"></use>
+                            </svg>
+                            <span class="sidebar__link" > History </span>
+                            </div>
+                            <div class="sidebar__btn " onclick="toProfile()">
+                                <svg class="sidebar__icon">
+                                    <use xlink:href="img/svg/user.svg#Capa_1"></use>
+                                </svg>
+                                <span class="sidebar__link" > Profile </span>
+                            </div>
+                            <div class="sidebar__btn">
+                                <svg class="sidebar__icon">
+                                    <use xlink:href="img/svg/copy.svg#Capa_1"></use>
+                                </svg>
+                                <span class="sidebar__link"> Copyrights </span>
+                            </div>
+                        <div class="sidebar__copy">&copy; <span class="changeYear">%date%</span> Mateusz Hartabus</div>
+                    </nav>
+                <!-- Main -->
+                <main class="main">
+                    <div class="history__profile">
+                       <div class="profile">
+                           <div class="profile__box">
+                               <div class="profile__box--wrapper">
+                                    <div class="profile__box--name">Logged as:</div>
+                                    <div class="profile__box--lastname">Mark</div>
+                                    <button id="logoutButton"  onclick="logout()" class="profile__box--btn">Logout</button>
+                                </div>
+                                <img alt="profile picture" src="img/person-1.jpg" class="profile__box--pic">
+                            </div>
+                       </div>
+                   </div>
+                </main>
+            </div>
+        </div>      
+    </div>
+ </div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCD8x3xeQ7nTOPiglr6oHRNKq7Np4MSclQ",
+    authDomain: "todoer-login.firebaseapp.com",
+    databaseURL: "https://todoer-login.firebaseio.com",
+    projectId: "todoer-login",
+    storageBucket: "todoer-login.appspot.com",
+    messagingSenderId: "827466412486"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="scripts/script.js"></script>
+<script src="scripts/index.js"></script>
+</body>
+</html>

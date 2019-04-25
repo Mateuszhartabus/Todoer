@@ -1,0 +1,36 @@
+.history__profile{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.historyContainer{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    padding-top: 2rem;
+
+    &__table{
+        width: 75%;
+        tr{
+
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        td{
+            text-align: center;
+            border: 1px solid darken($color-dark-2,5%);
+            font-size: 2rem;
+            padding: 2rem;
+            
+        }
+    }
+    }
+}
+
+.first{
+    background-color: darken($color-dark-2,5%);
+    color:$color-light-grey;
+}

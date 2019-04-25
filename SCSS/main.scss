@@ -1,0 +1,28 @@
+@import"abstracts/functions";
+@import"abstracts/mixins";
+@import"abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "component/logInForm.scss";
+
+@import "layout/sidebar.scss";
+@import "layout/main.scss";
+@import "layout/state.scss";
+@import "layout/tasks.scss";
+
+
+@import"pages/history";
+@import"pages/home";
+@import"pages/profile";
+
+
+
+
+
+
+
+
